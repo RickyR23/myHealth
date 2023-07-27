@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/updatedbackground"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/med_log_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="166dp"
+        android:text="Medication Log"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medication_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/medication_button"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:background="@drawable/medicationpng"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71000004" />
+
+    <TextView
+        android:id="@+id/hr_log_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="Heart Rate Log"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hr_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hr_button"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/testimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bp_button" />
+
+    <TextView
+        android:id="@+id/weight_log_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginEnd="103dp"
+        android:text="Weight Log"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hr_log_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/weight_button"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/weightpng"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bp_log_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="35dp"
+        android:text="Blood Pressure Log"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/hr_button"
+        app:layout_constraintStart_toEndOf="@+id/gc_log_text"
+        app:layout_constraintTop_toBottomOf="@+id/bp_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bp_button"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bppng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.803"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dashboard_header"
+        android:layout_width="151dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/archivo"
+        android:text="myHealth"
+        android:textColor="#000000"
+        android:textColorHighlight="#00FFFFFF"
+        android:textColorHint="#00AAAAAA"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gc_button"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/gluecosepng"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gc_log_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="35dp"
+        android:text="Glucose Log"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/weight_button"
+        app:layout_constraintEnd_toStartOf="@+id/bp_log_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gc_button" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="339dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="76dp"
+        android:background="#000000"
+        android:backgroundTint="#aad1c7"
+        android:clickable="true"
+        android:theme="@style/CardView.Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_preferences" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

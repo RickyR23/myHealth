@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/updatedbackground"
+    android:layout_height="match_parent"
+    tools:context=".dashButtons.hrAdvancedGraph.hrAdvancedGraph">
+
+    <com.example.advancedalarmclock.dashButtons.hrAdvancedGraph.hrGraphView
+        android:id="@+id/hrGraph"
+        android:layout_width="391dp"
+        android:layout_height="581dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="371dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <ImageView
+        android:id="@+id/return_GraphbuttonHr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="8dp" />
+
+    <ScrollView
+        android:layout_width="404dp"
+        android:layout_height="92dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:text="     Graphical Representation shows: "
+                android:layout_height="wrap_content"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:text="     X-Axis as inputed Dates  "
+                android:layout_height="wrap_content"
+                android:textSize="20dp" />
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:text="     Y-Axis left side is Heart rate Measures  "
+                android:layout_height="wrap_content"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

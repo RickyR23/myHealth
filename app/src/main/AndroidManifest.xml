@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AdvancedAlarmClock"
+        tools:targetApi="31">
+        <activity
+            android:name=".dashButtons.weightInfo.bmiWeight"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.weightInfo.faqWeight"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrInfo.visualHr"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrInfo.faqHr"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.gcInfo.testingGc"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.gcInfo.faqGc"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.gcInfo.gcInfo"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpInfo.visualToBP"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpInfo.faqBP"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.userSettings.displaySettings"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.userSettings.userSettings"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.medInfo.medInfoUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.medInfo.medInfoAddData"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.medJournal.medJournalAddData"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.medJournal.medUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrJournal.hrJournalAddData"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrJournal.hrUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.weightJournal.weightUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.weightJournal.weightJournalAddData"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpJournal.bpUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpJournal.bpJournalAddData"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.medInfo.medInfo"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.medJournal.medJournal"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrInfo.hrInfo"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrAdvancedGraph.hrAdvancedGraph"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrJournal.hrJournal"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.weightInfo.weightInfo"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.weightAdvancedGraph.weightAdvancedGraph"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.weightJournal.weightJournal"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpInfo.bpInfo"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpAdvancedGraph.bpAdvancedGraph"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpJournal.bpJournal"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.gcAdvancedGraph.gcAdvancedGraph"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.gcJournal.updateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.gcJournal.journalAddData"
+            android:exported="false"
+            android:label="Add to Journal"
+            android:parentActivityName=".dashButtons.gcJournal.gcJournal" />
+        <activity
+            android:name=".dashButtons.gcJournal.gcJournal"
+            android:exported="false"
+            android:parentActivityName=".dashButtons.gcDash"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".dashButtons.settingsDash"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.medDash"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.hrDash"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.weightDash"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.bpDash"
+            android:exported="false" />
+        <activity
+            android:name=".dashButtons.gcDash"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
