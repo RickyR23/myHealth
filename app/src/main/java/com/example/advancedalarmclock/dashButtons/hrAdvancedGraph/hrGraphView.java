@@ -87,6 +87,7 @@ public class hrGraphView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(lineColor); // Set the line color
         paint.setStrokeWidth(lineStrokeWidth);
+        canvas.drawColor(Color.WHITE);
 
         // Draw grid lines and labels
         drawGrid(canvas, width, height, paint);
@@ -128,14 +129,18 @@ public class hrGraphView extends View {
         }
 
 
-        // Draw vertical grid lines and labels
         float xStep = (float) width / (dateData.size() - 1); // Calculate the step size for X-axis labels
         for (int i = 0; i < dateData.size(); i++) {
             float x = i * xStep;
             canvas.drawLine(x, 0, x, height, paint);
 
-            // Draw X-axis labels
+            // Draw X-axis labels (Show mm/dd format)
             String label = dateData.get(i); // Get the label from dateData
+            if (label.length() == 7) {
+                label = label.substring(0, 1) + "/" + label.substring(1, 3);
+            } else if (label.length() == 8) {
+                label = label.substring(0, 2) + "/" + label.substring(2, 4);
+            }
             float labelWidth = paint.measureText(label);
             canvas.drawText(label, x - labelWidth / 2, height - 10, paint);
         }

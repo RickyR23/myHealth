@@ -12,13 +12,12 @@ import java.util.List;
 
 public class GraphView extends View {
     private int setLinecolor;
-    private int minGlucoseValue; // Added
-    private float lineStrokeWidth; // Added
+    private int minGlucoseValue;
+    private float lineStrokeWidth;
     private List<String> dateData;
     private List<Integer> glucoseData;
     private int maxGlucoseValue;
     private int graphWidth;
-
     private int lineColor;
 
     public void setLineColor(int color) {
@@ -27,14 +26,36 @@ public class GraphView extends View {
 
     public GraphView(Context context) {
         super(context);
+        init();
     }
 
     public GraphView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
     public GraphView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    private void init() {
+        graphWidth = 0;
+        lineStrokeWidth = 15f; // Set the desired line stroke width
+    }
+
+    public void setGlucoseData(List<String> dateData, List<Integer> glucoseData, int minGlucoseValue, int maxGlucoseValue, int lineColor) {
+        this.dateData = dateData;
+        this.glucoseData = glucoseData;
+        this.minGlucoseValue = minGlucoseValue;
+        this.maxGlucoseValue = maxGlucoseValue;
+        this.lineColor = lineColor; // Added lineColor assignment
+        invalidate(); // Redraw the graph
+    }
+
+    public void setGraphWidth(int width) {
+        graphWidth = width;
+        requestLayout(); // Request a layout update
     }
 
     @Override
@@ -55,26 +76,13 @@ public class GraphView extends View {
             setMeasuredDimension(width, height);
         }
     }
-    public void setGraphWidth(int width) { // Added
-        graphWidth = width;
-        requestLayout(); // Request a layout update
-    }
 
-    private void init() {
-        graphWidth = 0;
-        lineStrokeWidth = 15f; // Set the desired line stroke width
-    }
-    public void setGlucoseData(List<String> dateData, List<Integer> glucoseData, int minGlucoseValue, int maxGlucoseValue, int lineColor) {
-        this.dateData = dateData;
-        this.glucoseData = glucoseData;
-        this.minGlucoseValue = minGlucoseValue;
-        this.maxGlucoseValue = maxGlucoseValue;
-        this.lineColor = lineColor; // Added lineColor assignment
-        invalidate(); // Redraw the graph
-    }
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        // Set the background color to white
+        canvas.drawColor(Color.WHITE);
 
         if (dateData == null || dateData.isEmpty() || glucoseData == null || glucoseData.isEmpty())
             return;
@@ -113,9 +121,9 @@ public class GraphView extends View {
         paint.setTextSize(40f);
 
         // Draw horizontal grid lines and labels
-        float yStep = (float) height / (maxGlucoseValue - minGlucoseValue + 1); // Updated
-        for (int i = minGlucoseValue; i <= maxGlucoseValue; i++) { // Updated
-            float y = height - (i - minGlucoseValue) * yStep; // Updated
+        float yStep = (float) height / (maxGlucoseValue - minGlucoseValue + 1);
+        for (int i = minGlucoseValue; i <= maxGlucoseValue; i++) {
+            float y = height - (i - minGlucoseValue) * yStep;
             canvas.drawLine(0, y, width, y, paint);
 
             // Draw Y-axis labels
@@ -126,15 +134,19 @@ public class GraphView extends View {
             canvas.drawText(label, labelX, labelY, paint);
         }
 
-
         // Draw vertical grid lines and labels
         float xStep = (float) width / (dateData.size() - 1); // Calculate the step size for X-axis labels
         for (int i = 0; i < dateData.size(); i++) {
             float x = i * xStep;
             canvas.drawLine(x, 0, x, height, paint);
 
-            // Draw X-axis labels
+            // Draw X-axis labels (Show mm/dd format)
             String label = dateData.get(i); // Get the label from dateData
+            if (label.length() == 7) {
+                label = label.substring(0, 1) + "/" + label.substring(1, 3);
+            } else if (label.length() == 8) {
+                label = label.substring(0, 2) + "/" + label.substring(2, 4);
+            }
             float labelWidth = paint.measureText(label);
             canvas.drawText(label, x - labelWidth / 2, height - 10, paint);
         }
