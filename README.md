@@ -2,6 +2,8 @@
 Overview
 Welcome to myHealth, an Android application designed to help users maintain and monitor their daily health readings with ease. This app provides a user-friendly interface to log and store crucial health data, including Blood Pressure, Weight, Glucose, and Heart Rate readings. An option for medical prescription logging is also available. In addition to the data logging capabilities, myHealth also offers data visualization and access to relevant medical information, making it a comprehensive health management tool for the average user.
 
+![image](https://github.com/RickyR23/myHealth/assets/123121698/aa36a06f-394d-49bb-adc3-86f4d02defa9)
+
 ## Features
 1. Health Journals and Data Logging
 Blood Pressure Journal: Users can record their daily Blood Pressure readings, including Systolic and Diastolic values along with their current pulse readings. Visualized data will display their Systolic and Diastolic measurements along with their date of reading.
@@ -9,13 +11,18 @@ Weight Journal: Users can log their daily weight to track changes over time. Dat
 Glucose Journal: This feature allows users to input their daily glucose levels with notes. 
 Heart Rate Journal: Users can keep track of their daily heart rate measurements and keep track at an hourly rate.
 
+![image](https://github.com/RickyR23/myHealth/assets/123121698/1b589bd6-d5e6-4bf1-b7f7-0dd3a892e264)
+
+
+![image](https://github.com/RickyR23/myHealth/assets/123121698/b078752c-74b7-4343-9b83-b4c5d8100ca2)
+
 3. User-Friendly Interface
 myHealth is designed to be intuitive and easy to use for the average user. The interface ensures a seamless experience for logging health data with a visual component designed for the intake of an average user.
 
 4. Data Visualization
 Monthly Data Visualization: The app provides an auto-updated visual representation of the user's inputted data and dates for the past 30 days. This feature helps users to identify trends and patterns in their health data easily.
 
-6. Medical Information Integration
+5. Medical Information Integration
 Information Pages: myHealth offers an information page for each health journal (Blood Pressure, Weight, Glucose, and Heart Rate). These pages provide relevant and automatically up-to-date medical information related to each parameter. This integration ensures users have access to accurate information for better understanding and managing their health.
 
 ## Getting Started
@@ -43,5 +50,7 @@ We would like to thank all our users who have supported and provided valuable fe
 Thank you for choosing myHealth to manage and monitor your health. We hope this app helps you lead a healthier life!
 
 Note: The content provided in the information pages of myHealth is for informational purposes only and should not be considered medical advice. Always consult with a qualified healthcare professional for any health-related concerns.
+![image](https://github.com/RickyR23/myHealth/assets/123121698/18ee0f29-7d7c-4473-b540-d050a72da795)
 
-![alt text](https://imgur.com/a/uauHLO3)
+
+
