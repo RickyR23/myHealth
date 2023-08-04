@@ -43,3 +43,5 @@ We would like to thank all our users who have supported and provided valuable fe
 Thank you for choosing myHealth to manage and monitor your health. We hope this app helps you lead a healthier life!
 
 Note: The content provided in the information pages of myHealth is for informational purposes only and should not be considered medical advice. Always consult with a qualified healthcare professional for any health-related concerns.
+
+![alt text](https://imgur.com/a/uauHLO3)
